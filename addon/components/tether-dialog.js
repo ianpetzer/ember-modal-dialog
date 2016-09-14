@@ -4,7 +4,7 @@ import layout from '../templates/components/tether-dialog';
 
 const { dasherize } = Ember.String;
 const { computed, get } = Ember;
-const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+const isIOS = navigator && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
 export default ModalDialog.extend({
   layout,
